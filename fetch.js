@@ -35,16 +35,13 @@ arrayImg().then(img =>{
     console.log("Array error");
 })
 
-//https://dev.to/itsjjpowell/retrieving-files-with-the-fetch-api-i5l
 //Task 3
 async function writePoem()
 {
-    fetch('poem.txt')
-    .then(reponse => response.txt())
-    // const txt = await fetch('poem.txt');
-    // const sender = await txt.text();
-    // console.log(sender);
-    // document.getElementById("poetry").innerHTML = sender;
+    const txt = await fetch('poem.txt');
+    const sender = await txt.text();
+    console.log(sender);
+    document.getElementById("poetry").innerHTML = sender;
 }
 
 writePoem().then(text =>{
